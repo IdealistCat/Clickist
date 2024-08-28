@@ -3,7 +3,11 @@ body {
 }
 
 .click {
-    width: 100px;
-    height: 100px;
-    align-self: center;
+    background-color: rgb(40, 50, 150);
+    color: white;
+
+    width: 200px;
+    height: 200px;
+    
+    position: absolute;
 }
