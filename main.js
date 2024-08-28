@@ -1,4 +1,4 @@
-const GAME_VERSION = "1.0.0";
+const GAME_VERSION = "1";
 
 var versionText = document.getElementById('version');
-versionText.innerText = `Version: ${GAME_VERSION}`;
+versionText.innerText = `v${GAME_VERSION}`;
