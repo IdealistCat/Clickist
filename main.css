@@ -7,4 +7,6 @@ body {
 
 .clickBTN {
     background-color: rgb(40, 50, 150);
+
+    height: 500px;
 }
