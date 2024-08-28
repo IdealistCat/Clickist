@@ -3,5 +3,4 @@ const GAME_STATUS = {
     "author" : "IdealistCat"
 }
 
-let version_text = document.getElementById('version');
-version_text.innerText = GAME_STATUS["version"];
+document.getElementById('version').innerHTML = GAME_STATUS["version"];
