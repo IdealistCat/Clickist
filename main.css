@@ -2,9 +2,15 @@ body {
     background-color: rgb(20, 50, 100);
 }
 
-#click {
+.click {
     background-color: rgb(40, 50, 150);
-    color: white;
+    border: none;
+    padding: 15px 32px;
 
-    font-size: 64px;
+    color: white;
+    font-size: 16px;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
