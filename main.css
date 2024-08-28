@@ -6,8 +6,7 @@ body {
     background-color: rgb(40, 50, 150);
     color: white;
 
-    width: 200px;
-    height: 200px;
-    
-    position: absolute;
+    font-size: 64px;
+
+    align-content: center;
 }
