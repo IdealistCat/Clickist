@@ -2,7 +2,7 @@ body {
     background-color: rgb(20, 50, 100);
 }
 
-.click {
+#click {
     background-color: rgb(40, 50, 150);
     color: white;
 
