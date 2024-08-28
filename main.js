@@ -1,3 +1,3 @@
 const GAME_VERSION = "1.0.0";
 
-document.getElementById('version').innerHTML = GAME_VERSION;
+document.getElementById('versionTEXT').innerText = GAME_VERSION;
