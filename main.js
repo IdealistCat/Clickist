@@ -4,4 +4,4 @@ const GAME_STATUS = {
 }
 
 let version_text = document.getElementById('version');
-version_text.innerHTML = GAME_STATUS["version"];
+version_text.innerText = GAME_STATUS["version"];
