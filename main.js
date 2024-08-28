@@ -1,6 +1,3 @@
-const GAME_STATUS = {
-    "version" : "1.0.0",
-    "author" : "IdealistCat"
-}
+const GAME_VERSION = "1.0.0";
 
-document.getElementById('version').innerHTML = GAME_STATUS["version"];
+document.getElementById('version').innerHTML = GAME_VERSION;
