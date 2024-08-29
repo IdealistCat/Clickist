@@ -22,7 +22,7 @@ function clickFunction() {
     GAMEPLAY_MONEY += GAMEPLAY_MONEY_ADDITION;
 
     moneyText.innerHTML = `Money: $${GAMEPLAY_MONEY.toString()}`;
-    tcText.innerHTML = `Total Clicks: ${GAMEPLAY_TOTAL_CLICKS.toString()}`;   
+    tcText.innerHTML = `Total Clicks: ${GAMEPLAY_TOTAL_CLICKS.toString()}`;
 }
 
 function changeMoneyAddition(add = 0) {
