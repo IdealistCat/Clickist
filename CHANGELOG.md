@@ -8,3 +8,6 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 - "Background"
 - Button
 - Version
+- Total Clicks
+- Money
+- 
