@@ -37,8 +37,8 @@ var moneyPerS = document.getElementById('money-second');
 var clickButton = document.getElementById('clickButton');
 
 function clickFunction() {
-    GAMEPLAY_TOTAL_CLICKS += 1;
-    GAMEPLAY_MONEY += GAMEPLAY_MONEY_ADDITION;
+    GAMEPLAY_TOTAL_CLICKS++;
+    GAMEPLAY_MONEY = GAMEPLAY_MONEY + GAMEPLAY_MONEY_ADDITION;
 
     clickSFX.currentTime = 0;
     clickSFX.play();
