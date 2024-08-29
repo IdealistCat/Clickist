@@ -52,7 +52,7 @@ function changeTexts() {
     moneyPerS.innerHTML = `${readTextFile('./assets/data/credits.txt')}`;
 }
 function secondPass() {
-    GAMEPLAY_MONEY += GAMEPLAY_MONEY_AUTOMATIC;
+    GAMEPLAY_MONEY = GAMEPLAY_MONEY + GAMEPLAY_MONEY_AUTOMATIC;
     
     changeTexts();
     // clearInterval(INTERVAL);
