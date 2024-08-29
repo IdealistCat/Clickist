@@ -5,13 +5,12 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 
 ## v0.2 - 8/29/24
 ### Removed
-- Saves
-- Autosaving
 - Console Log Viewer
 ### Added
 - Money per click text
 - UI box
 - Colors to UI text
+- Saving
 ### Changed
 - Click Button Functionality
 ### Fixed
