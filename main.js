@@ -14,7 +14,7 @@ console.log(fetch('/Clickist/assets/credits.txt'));
 const GAMEPLAY_TOTAL_CLICKS = 0;
 const GAMEPLAY_MONEY = 0;
 
-const AUTOSAVE_TIME = 5;
+const AUTOSAVE_SECOND = 1;
 
 let DATE_THING = new Date();
 let INTERVAL = setInterval(saveAllData(), AUTOSAVE_TIME * 1000);
