@@ -25,5 +25,14 @@ function clickFunction() {
     tcText.innerHTML = `Total Clicks: ${GAMEPLAY_TOTAL_CLICKS.toString()}`;   
 }
 
-moneyPer.innerHTML = GAMEPLAY_MONEY_ADDITION.toString();
+function changeMoneyAddition(add = 0) {
+    GAMEPLAY_MONEY_ADDITION += add;
+    moneyPer.innerHTML = `Money per Click: ${GAMEPLAY_MONEY_ADDITION}`;
+}
+
+function initalize() {
+    changeMoneyAddition();
+}
+
 clickButton.addEventListener("click", clickFunction);
+initalize();
