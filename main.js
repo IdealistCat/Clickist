@@ -57,6 +57,10 @@ function save() {
 }
 function load() {
     GAMEPLAY_MONEY = localStorage.money;
+    if (GAMEPLAY_MONEY == NaN) {
+        GAMEPLAY_MONEY = 0;
+        localStorage.money = 0;
+    }
 }
 function reset() {
     localStorage.money = 0;
