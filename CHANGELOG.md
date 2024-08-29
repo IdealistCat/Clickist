@@ -9,7 +9,7 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 - inital version text
 ### Added
 - Money per click text
-- Saving
+- Saving?
 - script folder
   - `files.js` - file for reading files.
   - `math.js` - file for mathamatic functions that dont already exist.
