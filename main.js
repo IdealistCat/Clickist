@@ -41,8 +41,8 @@ function changeTexts() {
     moneyText.innerHTML = `Money: $${Number(GAMEPLAY_MONEY).toString()}`;
     tcText.innerHTML = `Total Clicks: ${Number(GAMEPLAY_TOTAL_CLICKS).toString()}`;   
     moneyPerC.innerHTML = `Money per Click: ${Number(GAMEPLAY_MONEY_ADDITION).toString()}`;   
-    // moneyPerS.innerHTML = `Money per Second: ${Number(GAMEPLAY_MONEY_AUTOMATIC).toString()}`;
-    moneyPerS.innerHTML = `${readTextFile('./assets/data/credits.txt')}`;
+    moneyPerS.innerHTML = `Money per Second: ${Number(GAMEPLAY_MONEY_AUTOMATIC).toString()}`;
+    // moneyPerS.innerHTML = `${readTextFile('./assets/data/credits.txt')}`;
 }
 function secondPass() {
     GAMEPLAY_MONEY = GAMEPLAY_MONEY + GAMEPLAY_MONEY_AUTOMATIC;
