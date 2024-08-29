@@ -23,12 +23,6 @@ let GAMEPLAY_MONEY_ADDITION = 1;
 const TIME_INTERVAL = 1;
 let INTERVAL = setInterval(secondPass, TIME_INTERVAL * 1000);
 
-// sfx
-var clickSFX = new Audio(`./assets/sounds/clicks/click1.${AUDIO_EXT}`);
-clickSFX.onended(function() {
-    clickSFX.src = `./assets/sounds/clicks/click${getRandomInt(3) + 1}.${AUDIO_EXT}`;
-});
-
 // Text
 var tcText = document.getElementById('total-clicks');
 var moneyText = document.getElementById('money');
@@ -42,7 +36,6 @@ function clickFunction() {
     GAMEPLAY_MONEY = GAMEPLAY_MONEY + GAMEPLAY_MONEY_ADDITION;
     
     changeTexts();
-    // clickSFX.play();
 }
 function changeTexts() {
     moneyText.innerHTML = `Money: $${Number(GAMEPLAY_MONEY).toString()}`;

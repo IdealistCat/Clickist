@@ -12,7 +12,6 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 - script folder
   - `files.js` - file for reading files.
 - Money per second
-- Audio
 ### Changed
 - Click Button Functionality
 ### Fixed
