@@ -24,3 +24,13 @@ body {
 #ui_box:hover {
 	background-color: #476e9e;
 }
+
+.total-clicks {
+	color: rgb(255, 100, 0);
+}
+.money-click {
+	color: greenyellow;
+}
+.money {
+	color: green;
+}
