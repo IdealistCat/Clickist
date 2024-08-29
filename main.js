@@ -20,14 +20,17 @@ var clickButton = document.getElementById('clickButton');
 function clickFunction() {
     GAMEPLAY_TOTAL_CLICKS += 1;
     GAMEPLAY_MONEY += GAMEPLAY_MONEY_ADDITION;
-
+    changeTexts();
+}
+function changeTexts() {
     moneyText.innerHTML = `Money: $${GAMEPLAY_MONEY.toString()}`;
+    moneyPer.innerHTML = `Money per Click: ${GAMEPLAY_MONEY_ADDITION}`;
     tcText.innerHTML = `Total Clicks: ${GAMEPLAY_TOTAL_CLICKS.toString()}`;
 }
 
 function changeMoneyAddition(add = 0) {
     GAMEPLAY_MONEY_ADDITION += add;
-    moneyPer.innerHTML = `Money per Click: ${GAMEPLAY_MONEY_ADDITION}`;
+    changeTexts();
 }
 
 function initalize() {
