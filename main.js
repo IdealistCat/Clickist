@@ -20,6 +20,10 @@ var clickButton = document.getElementById('clickButton');
 function clickFunction() {
     GAMEPLAY_TOTAL_CLICKS += 1;
     GAMEPLAY_MONEY += GAMEPLAY_MONEY_ADDITION;
+
+    localStorage.setItem('total-clicks', GAMEPLAY_TOTAL_CLICKS);
+    localStorage.setItem('money', GAMEPLAY_MONEY);
+
     changeTexts();
 }
 function changeTexts() {
