@@ -4,7 +4,7 @@ const GAME_STATE = "alpha";
 const GAME_STATE_VERSION_STRING = GAME_STATE.length > 0 ? `-${GAME_STATE}` : "";
 
 var versionText = document.getElementById('version');
-versionText.innerText = `v.${GAME_VERSION}${GAME_STATE_VERSION_STRING}`;
+versionText.innerText = `v${GAME_VERSION}${GAME_STATE_VERSION_STRING}`;
 
 // gameplay things
 let GAMEPLAY_TOTAL_CLICKS = 0;
