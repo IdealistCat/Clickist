@@ -17,6 +17,7 @@ const GAMEPLAY_MONEY = 0;
 const AUTOSAVE_TIME = 5;
 
 let DATE_THING = new Date();
+let INTERVAL = setInterval(saveAllData(), AUTOSAVE_TIME * 1000);
 
 function loadSaveData(data = String) {
     localStorage.getItem(data);
@@ -34,6 +35,5 @@ function saveAllData() {
     saveData('money', GAMEPLAY_MONEY);
 
     console.log('Saved: ' + START_TIME - Date.now());
+    clearInterval(INTERVAL);
 }
-
-setInterval(saveAllData(), AUTOSAVE_TIME * 1000);
