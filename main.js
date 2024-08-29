@@ -40,7 +40,6 @@ function clickFunction() {
     GAMEPLAY_TOTAL_CLICKS++;
     GAMEPLAY_MONEY = GAMEPLAY_MONEY + GAMEPLAY_MONEY_ADDITION;
 
-    clickSFX.currentTime = 0;
     clickSFX.play();
     changeTexts();
 }
