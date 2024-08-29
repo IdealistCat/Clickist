@@ -3,7 +3,8 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 
 # Alpha
 
-
+## v0.2 - 8/29/24
+### Added
 
 ## v0.1 - 8/28/24
 ### Added
