@@ -12,6 +12,8 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 - Money per click text
 ### Changed
 - Click Button Functionality
+### Fixed
+- Clicking (it finally works!)
 
 ## v0.1 - 8/28/24
 ### Added
