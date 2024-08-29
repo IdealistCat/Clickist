@@ -5,11 +5,9 @@ body {
 	font-size: 16px;
 }
 
-#clickButton .ui_box {
+#clickButton {
 	background-color: #7892c2;
 	border-radius: 5px;
-
-	color: #ffffff;
 
 	font-family: Impact;
 	font-size: 2em;
@@ -20,7 +18,7 @@ body {
 	transition: background-color 0.25s;
 }
 
-#clickButton:hover .ui_box:hover {
+#clickButton:hover {
 	background-color: #476e9e;
 }
 
