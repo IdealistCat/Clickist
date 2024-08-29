@@ -9,21 +9,35 @@ versionText.innerText = `v${GAME_VERSION}${GAME_STATE_VERSION_STRING}`;
 // gameplay things
 let GAMEPLAY_TOTAL_CLICKS = 0;
 let GAMEPLAY_MONEY = 0;
+let GAMEPLAY_MONEY_AUTOMATIC = 10;
 let GAMEPLAY_MONEY_ADDITION = 1;
+
+let INTERVAL = setInterval(secondPass, 1000);
 
 var tcText = document.getElementById('total-clicks');
 var moneyText = document.getElementById('money');
-var moneyPer = document.getElementById('money-click');
+var moneyPerC = document.getElementById('money-click');
+var moneyPerS = document.getElementById('money-second');
 
 var clickButton = document.getElementById('clickButton');
 
 function clickFunction() {
     GAMEPLAY_TOTAL_CLICKS += 1;
     GAMEPLAY_MONEY += GAMEPLAY_MONEY_ADDITION;
-
+    
+    changeTexts();
+}
+function changeTexts(params) {
     moneyText.innerHTML = `Money: $${Number(GAMEPLAY_MONEY).toString()}`;
     tcText.innerHTML = `Total Clicks: ${Number(GAMEPLAY_TOTAL_CLICKS).toString()}`;   
+    moneyPerC.innerHTML = `Money per Click: ${GAMEPLAY_MONEY_ADDITION.toString()}`;   
+    moneyPerS.innerHTML = `Money per Second: ${GAMEPLAY_MONEY_AUTOMATIC.toString()}`;
+}
+function secondPass() {
+    GAMEPLAY_MONEY += GAMEPLAY_MONEY_AUTOMATIC;
+    
+    changeTexts();
+    clearInterval(INTERVAL);
 }
 
-moneyPer.innerHTML = GAMEPLAY_MONEY_ADDITION.toString();
 clickButton.addEventListener("click", clickFunction);

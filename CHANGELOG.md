@@ -9,6 +9,7 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 ### Added
 - Money per click text
 - Saving
+- Money per second
 ### Changed
 - Click Button Functionality
 ### Fixed
