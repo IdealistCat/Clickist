@@ -1,6 +1,4 @@
 // non-gameplay things
-let START_TIME = Date.now();
-
 const GAME_VERSION = "0.1";
 const GAME_STATE = "alpha";
 const GAME_STATE_VERSION_STRING = GAME_STATE.length > 0 ? `-${GAME_STATE}` : "";
@@ -15,45 +13,11 @@ let GAMEPLAY_TOTAL_CLICKS = 0;
 let GAMEPLAY_MONEY = 0;
 let GAMEPLAY_MONEY_ADDITION = 1;
 
-let AUTOSAVE_SECOND = 1;
-
-let DATE_THING = new Date();
-//let INTERVAL = setInterval(saveAllData(), AUTOSAVE_TIME * 1000);
-
 var tcText = document.getElementById('total-clicks');
 var moneyText = document.getElementById('money');
 
 var clickButton = document.getElementById('clickButton');
 
-function loadSaveData(data = 'money', htmlElement = moneyText) {
-    localStorage.getItem(data);
-    try { htmlElement.innerHTML = localStorage.getItem(data).toString(); } catch(error) { console.error(error); }
-}
-function saveData(data = String, content, htmlElement = moneyText) {
-    localStorage.setItem(data, content);
-    try { htmlElement.innerHTML = content.toString(); } catch(error) { console.error(error); }
-}
-
-function loadAllData() {
-    GAMEPLAY_TOTAL_CLICKS = loadSaveData('total-clicks', tcText);
-    GAMEPLAY_MONEY = loadSaveData('money-addition', null);
-    GAMEPLAY_MONEY = loadSaveData('money', moneyText); // Doesn't require values but are they just in case
-}
-function saveAllData() {
-    saveData('total-clicks', GAMEPLAY_TOTAL_CLICKS, tcText);
-    saveData('money-addition', GAMEPLAY_MONEY_ADDITION, null);
-    saveData('money', GAMEPLAY_MONEY, moneyText);
-
-    console.log('Saved: ' + START_TIME - Date.now());
-    // clearInterval(INTERVAL);
-}
-function eraseAllData() {
-    saveData('total-clicks', 0);
-    saveData('money-addition', 1);
-    saveData('money', 0);
-
-    loadAllData();
-}
 function click(params) {
     GAMEPLAY_TOTAL_CLICKS += 1;
     GAMEPLAY_MONEY += GAMEPLAY_MONEY_ADDITION;
@@ -61,7 +25,5 @@ function click(params) {
     moneyText.innerHTML = GAMEPLAY_MONEY.toString();
     tcText.innerHTML = GAMEPLAY_TOTAL_CLICKS.toString();   
 }
-
-loadAllData();
 
 clickButton.onclick(click());
