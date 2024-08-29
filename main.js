@@ -15,7 +15,8 @@ let GAMEPLAY_MONEY = 0;
 let GAMEPLAY_MONEY_AUTOMATIC = 10;
 let GAMEPLAY_MONEY_ADDITION = 1;
 
-let INTERVAL = setInterval(secondPass, 1000);
+const TIME_INTERVAL = 1;
+let INTERVAL = setInterval(secondPass, TIME_INTERVAL * 1000);
 
 var tcText = document.getElementById('total-clicks');
 var moneyText = document.getElementById('money');
@@ -33,15 +34,15 @@ function clickFunction() {
 function changeTexts() {
     moneyText.innerHTML = `Money: $${Number(GAMEPLAY_MONEY).toString()}`;
     tcText.innerHTML = `Total Clicks: ${Number(GAMEPLAY_TOTAL_CLICKS).toString()}`;   
-    moneyPerC.innerHTML = `Money per Click: ${GAMEPLAY_MONEY_ADDITION.toString()}`;   
-    // moneyPerS.innerHTML = `Money per Second: ${GAMEPLAY_MONEY_AUTOMATIC.toString()}`;
+    moneyPerC.innerHTML = `Money per Click: ${Number(GAMEPLAY_MONEY_ADDITION).toString()}`;   
+    // moneyPerS.innerHTML = `Money per Second: ${Number(GAMEPLAY_MONEY_AUTOMATIC).toString()}`;
     moneyPerS.innerHTML = `${readTextFile()}`;
 }
 function secondPass() {
     GAMEPLAY_MONEY += GAMEPLAY_MONEY_AUTOMATIC;
     
     changeTexts();
-    // clearInterval(INTERVAL);
+    INTERVAL = setInterval(secondPass, TIME_INTERVAL * 1000);
 }
 
 clickButton.addEventListener("click", clickFunction);
