@@ -13,6 +13,7 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 - script folder
   - `files.js` - file for reading files.
   - `math.js` - file for mathamatic functions that dont already exist.
+  - `` - file for keyboard scripts
 - Money per second
 ### Changed
 - Click Button Functionality

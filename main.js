@@ -58,7 +58,23 @@ function save() {
 function load() {
     GAMEPLAY_MONEY = localStorage.money;
 }
+function reset() {
+    localStorage.money = 0;
+    
+    load();
+}
 
 clickButton.addEventListener("click", clickFunction);
 load();
 changeTexts();
+
+document.addEventListener("keydown", (event) => {
+    const keyName = event.key;
+
+    if (keyName === "r") {
+        reset();
+    }
+
+  },
+  false
+);
