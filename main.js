@@ -16,7 +16,7 @@ var moneyText = document.getElementById('money');
 
 var clickButton = document.getElementById('clickButton');
 
-function click(params) {
+function click() {
     GAMEPLAY_TOTAL_CLICKS += 1;
     GAMEPLAY_MONEY += GAMEPLAY_MONEY_ADDITION;
 
