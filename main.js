@@ -1,5 +1,6 @@
 // imports
 import { readTextFile } from "./scripts/files.js";
+import { getRandomInt } from "./scripts/math.js";
 
 // non-gameplay things
 const GAME_VERSION = "0.2";
@@ -25,7 +26,7 @@ let INTERVAL = setInterval(secondPass, TIME_INTERVAL * 1000);
 // sfx
 var clickSFX = new Audio(`./assets/sounds/clicks/click1.${AUDIO_EXT}`);
 clickSFX.onended(function() {
-    clickSFX.src = `./assets/sounds/clicks/click${Math.floor((Math.random() * 4) + 1)}.${AUDIO_EXT}`;
+    clickSFX.src = `./assets/sounds/clicks/click${getRandomInt(3) + 1}.${AUDIO_EXT}`;
 });
 
 // Text
@@ -39,9 +40,9 @@ var clickButton = document.getElementById('clickButton');
 function clickFunction() {
     GAMEPLAY_TOTAL_CLICKS++;
     GAMEPLAY_MONEY = GAMEPLAY_MONEY + GAMEPLAY_MONEY_ADDITION;
-
-    clickSFX.play();
+    
     changeTexts();
+    // clickSFX.play();
 }
 function changeTexts() {
     moneyText.innerHTML = `Money: $${Number(GAMEPLAY_MONEY).toString()}`;
