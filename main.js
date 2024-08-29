@@ -40,9 +40,9 @@ function loadAllData() {
     GAMEPLAY_MONEY = loadSaveData('money', moneyText); // Doesn't require values but are they just in case
 }
 function saveAllData() {
-    saveData('total-clicks', GAMEPLAY_TOTAL_CLICKS);
-    saveData('money-addition', GAMEPLAY_MONEY_ADDITION);
-    saveData('money', GAMEPLAY_MONEY);
+    saveData('total-clicks', GAMEPLAY_TOTAL_CLICKS, tcText);
+    saveData('money-addition', GAMEPLAY_MONEY_ADDITION, null);
+    saveData('money', GAMEPLAY_MONEY, moneyText);
 
     console.log('Saved: ' + START_TIME - Date.now());
     clearInterval(INTERVAL);
