@@ -6,7 +6,7 @@ const GAME_STATE = "alpha";
 const GAME_STATE_VERSION_STRING = GAME_STATE.length > 0 ? `-${GAME_STATE}` : "";
 
 var versionText = document.getElementById('version');
-versionText.innerText = `v. ${GAME_VERSION}${GAME_STATE_VERSION_STRING}`;
+versionText.innerText = `v.${GAME_VERSION}${GAME_STATE_VERSION_STRING}`;
 
 console.log(fetch('/Clickist/assets/credits.txt'));
 
@@ -32,7 +32,8 @@ function loadAllData() {
 function saveAllData() {
     saveData('total-clicks', GAMEPLAY_TOTAL_CLICKS);
     saveData('money', GAMEPLAY_MONEY);
+
     console.log('Saved: ' + START_TIME - Date.now());
 }
 
-setInterval(saveAllData, AUTOSAVE_TIME * 1000);
+setInterval(saveAllData(), AUTOSAVE_TIME * 1000);
