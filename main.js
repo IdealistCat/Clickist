@@ -53,10 +53,10 @@ function secondPass() {
     save();
 }
 function save() {
-    localStorage.setItem('money', GAMEPLAY_MONEY);
+    localStorage.money = GAMEPLAY_MONEY;
 }
 function load() {
-    GAMEPLAY_MONEY = localStorage.getItem('money');
+    GAMEPLAY_MONEY = localStorage.money;
 }
 
 clickButton.addEventListener("click", clickFunction);
