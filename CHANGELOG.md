@@ -6,6 +6,7 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 ## v0.2 - 8/29/24
 ### Removed
 - Console Log Viewer
+- inital version text
 ### Added
 - Money per click text
 - Saving
@@ -15,6 +16,7 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 - Money per second
 ### Changed
 - Click Button Functionality
+- version opacitiy
 ### Fixed
 - Clicking (it finally works!)
 
