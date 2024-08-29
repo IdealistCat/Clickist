@@ -55,7 +55,7 @@ function secondPass() {
     GAMEPLAY_MONEY += GAMEPLAY_MONEY_AUTOMATIC;
     
     changeTexts();
-    clearInterval(INTERVAL);
+    // clearInterval(INTERVAL);
 }
 
 clickButton.addEventListener("click", clickFunction);
