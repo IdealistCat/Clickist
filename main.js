@@ -27,10 +27,11 @@ var clickButton = document.getElementById('clickButton');
 
 function loadSaveData(data = 'money', htmlElement = moneyText) {
     localStorage.getItem(data);
-    try { htmlElement.innerHTML = localStorage.getItem(data); } catch(error) { console.error(error); };
+    try { htmlElement.innerHTML = localStorage.getItem(data).toString(); } catch(error) { console.error(error); }
 }
-function saveData(data = String, content = String) {
+function saveData(data = String, content = String, htmlElement = moneyText) {
     localStorage.setItem(data, content);
+    try { htmlElement.innerHTML = localStorage.getItem(data).toString(); } catch(error) { console.error(error); }
 }
 
 function loadAllData() {
