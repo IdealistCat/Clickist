@@ -13,10 +13,11 @@ let GAMEPLAY_MONEY_ADDITION = 1;
 
 var tcText = document.getElementById('total-clicks');
 var moneyText = document.getElementById('money');
+var moneyPer = document.getElementById('money-click');
 
 var clickButton = document.getElementById('clickButton');
 
-function click() {
+function clickFunction() {
     GAMEPLAY_TOTAL_CLICKS += 1;
     GAMEPLAY_MONEY += GAMEPLAY_MONEY_ADDITION;
 
@@ -24,4 +25,5 @@ function click() {
     tcText.innerHTML = GAMEPLAY_TOTAL_CLICKS.toString();   
 }
 
-clickButton.onclick(click());
+moneyPer.innerHTML = GAMEPLAY_MONEY_ADDITION.toString();
+clickButton.addEventListener("click", clickFunction())

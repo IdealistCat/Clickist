@@ -8,6 +8,10 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 - Saves
 - Autosaving
 - Console Log Viewer
+### Added
+- Money per click text
+### Changed
+- Click Button Functionality
 
 ## v0.1 - 8/28/24
 ### Added
