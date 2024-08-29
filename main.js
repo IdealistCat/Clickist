@@ -1,3 +1,6 @@
+// imports
+import { readTextFile } from "./scripts/files.js";
+
 // non-gameplay things
 const GAME_VERSION = "0.2";
 const GAME_STATE = "alpha";
@@ -27,11 +30,12 @@ function clickFunction() {
     
     changeTexts();
 }
-function changeTexts(params) {
+function changeTexts() {
     moneyText.innerHTML = `Money: $${Number(GAMEPLAY_MONEY).toString()}`;
     tcText.innerHTML = `Total Clicks: ${Number(GAMEPLAY_TOTAL_CLICKS).toString()}`;   
     moneyPerC.innerHTML = `Money per Click: ${GAMEPLAY_MONEY_ADDITION.toString()}`;   
-    moneyPerS.innerHTML = `Money per Second: ${GAMEPLAY_MONEY_AUTOMATIC.toString()}`;
+    // moneyPerS.innerHTML = `Money per Second: ${GAMEPLAY_MONEY_AUTOMATIC.toString()}`;
+    moneyPerS.innerHTML = `${readTextFile()}`;
 }
 function secondPass() {
     GAMEPLAY_MONEY += GAMEPLAY_MONEY_AUTOMATIC;
@@ -41,3 +45,4 @@ function secondPass() {
 }
 
 clickButton.addEventListener("click", clickFunction);
+changeTexts();
