@@ -8,8 +8,6 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 - Console Log Viewer
 ### Added
 - Money per click text
-- UI box
-- Colors to UI text
 - Saving
 ### Changed
 - Click Button Functionality
