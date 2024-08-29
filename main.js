@@ -18,7 +18,7 @@ let GAMEPLAY_MONEY_ADDITION = 1;
 let AUTOSAVE_SECOND = 1;
 
 let DATE_THING = new Date();
-let INTERVAL = setInterval(saveAllData(), AUTOSAVE_TIME * 1000);
+//let INTERVAL = setInterval(saveAllData(), AUTOSAVE_TIME * 1000);
 
 var tcText = document.getElementById('total-clicks');
 var moneyText = document.getElementById('money');
@@ -45,7 +45,7 @@ function saveAllData() {
     saveData('money', GAMEPLAY_MONEY, moneyText);
 
     console.log('Saved: ' + START_TIME - Date.now());
-    clearInterval(INTERVAL);
+    // clearInterval(INTERVAL);
 }
 function eraseAllData() {
     saveData('total-clicks', 0);
