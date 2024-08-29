@@ -54,14 +54,14 @@ function eraseAllData() {
 
     loadAllData();
 }
-
-loadAllData();
-
-clickButton.onclick(function() {
-    
-    GAMEPLAY_TOTAL_CLICKS++;
+function click(params) {
+    GAMEPLAY_TOTAL_CLICKS += 1;
     GAMEPLAY_MONEY += GAMEPLAY_MONEY_ADDITION;
 
     moneyText.innerHTML = GAMEPLAY_MONEY.toString();
-    tcText.innerHTML = GAMEPLAY_TOTAL_CLICKS.toString();
-})
+    tcText.innerHTML = GAMEPLAY_TOTAL_CLICKS.toString();   
+}
+
+loadAllData();
+
+clickButton.onclick(click());
