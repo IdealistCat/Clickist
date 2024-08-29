@@ -29,9 +29,9 @@ function loadSaveData(data = 'money', htmlElement = moneyText) {
     localStorage.getItem(data);
     try { htmlElement.innerHTML = localStorage.getItem(data).toString(); } catch(error) { console.error(error); }
 }
-function saveData(data = String, content = String, htmlElement = moneyText) {
+function saveData(data = String, content, htmlElement = moneyText) {
     localStorage.setItem(data, content);
-    try { htmlElement.innerHTML = localStorage.getItem(data).toString(); } catch(error) { console.error(error); }
+    try { htmlElement.innerHTML = content.toString(); } catch(error) { console.error(error); }
 }
 
 function loadAllData() {
@@ -62,5 +62,6 @@ clickButton.onclick(function() {
     GAMEPLAY_TOTAL_CLICKS++;
     GAMEPLAY_MONEY += GAMEPLAY_MONEY_ADDITION;
 
-    saveAllData();
+    moneyText.innerHTML = GAMEPLAY_MONEY.toString();
+    tcText.innerHTML = GAMEPLAY_TOTAL_CLICKS.toString();
 })
