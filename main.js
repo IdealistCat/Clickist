@@ -24,6 +24,9 @@ let INTERVAL = setInterval(secondPass, TIME_INTERVAL * 1000);
 
 // sfx
 var clickSFX = new Audio(`./assets/sounds/clicks/click1.${AUDIO_EXT}`);
+clickSFX.onended(function() {
+    clickSFX.src = `./assets/sounds/clicks/click${Math.floor((Math.random() * 4) + 1)}.${AUDIO_EXT}`;
+});
 
 // Text
 var tcText = document.getElementById('total-clicks');
@@ -39,7 +42,6 @@ function clickFunction() {
 
     clickSFX.currentTime = 0;
     clickSFX.play();
-    clickSFX.src = `./assets/sounds/clicks/click${(Math.random() + 1)}.${AUDIO_EXT}`;
     changeTexts();
 }
 function changeTexts() {
