@@ -33,7 +33,7 @@ var clickButton = document.getElementById('clickButton');
 
 function clickFunction() {
     GAMEPLAY_TOTAL_CLICKS += 1;
-    GAMEPLAY_MONEY = GAMEPLAY_MONEY + GAMEPLAY_MONEY_ADDITION;
+    GAMEPLAY_MONEY += GAMEPLAY_MONEY_ADDITION;
     
     changeTexts();
 }
@@ -45,7 +45,7 @@ function changeTexts() {
     // moneyPerS.innerHTML = `${readTextFile('./assets/data/credits.txt')}`;
 }
 function secondPass() {
-    GAMEPLAY_MONEY = GAMEPLAY_MONEY + GAMEPLAY_MONEY_AUTOMATIC;
+    GAMEPLAY_MONEY += GAMEPLAY_MONEY_AUTOMATIC;
     
     changeTexts();
     // clearInterval(INTERVAL);
