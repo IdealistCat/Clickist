@@ -3,6 +3,8 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 
 # Alpha
 
+
+
 ## v0.1 - 8/28/24
 ### Added
 - "Background"
@@ -10,4 +12,4 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 - Version
 - Total Clicks
 - Money
-- 
+- Money Additions
