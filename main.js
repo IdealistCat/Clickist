@@ -26,4 +26,4 @@ function clickFunction() {
 }
 
 moneyPer.innerHTML = GAMEPLAY_MONEY_ADDITION.toString();
-clickButton.addEventListener("click", clickFunction())
+clickButton.addEventListener("click", clickFunction);
