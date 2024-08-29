@@ -34,7 +34,15 @@ function changeMoneyAddition(add = 0) {
 }
 
 function initalize() {
-    changeMoneyAddition();
+    GAMEPLAY_TOTAL_CLICKS = localStorage.getItem('total-clicks');
+    GAMEPLAY_MONEY = localStorage.getItem('money');
+    GAMEPLAY_MONEY_ADDITION = localStorage.getItem('money-addition');
+
+    if (GAMEPLAY_TOTAL_CLICKS < 1) GAMEPLAY_TOTAL_CLICKS = 0;
+    if (GAMEPLAY_MONEY_ADDITION < 1) GAMEPLAY_MONEY_ADDITION = 1;
+    if (GAMEPLAY_MONEY < 1) GAMEPLAY_MONEY = 0;
+
+    changeTexts();
 }
 
 clickButton.addEventListener("click", clickFunction);
