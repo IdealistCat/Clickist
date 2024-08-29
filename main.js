@@ -32,7 +32,7 @@ var moneyPerS = document.getElementById('money-second');
 var clickButton = document.getElementById('clickButton');
 
 function clickFunction() {
-    GAMEPLAY_TOTAL_CLICKS++;
+    GAMEPLAY_TOTAL_CLICKS += 1;
     GAMEPLAY_MONEY = GAMEPLAY_MONEY + GAMEPLAY_MONEY_ADDITION;
     
     changeTexts();
