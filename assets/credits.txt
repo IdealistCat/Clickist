@@ -1,3 +1,4 @@
 IdealistCat - Designer, Programmer
 Markknol - Console Log Viewer
 ??? - https://www.bestcssbuttongenerator.com/
+Majid Laissi and Mike 'Pomax' Kamermans - Read Text File Function

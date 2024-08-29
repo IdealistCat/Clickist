@@ -9,6 +9,8 @@ The versioning system is [this one](https://en.wikipedia.org/wiki/Software_versi
 ### Added
 - Money per click text
 - Saving
+- script folder
+  - `files.js` - file for reading files.
 - Money per second
 ### Changed
 - Click Button Functionality
