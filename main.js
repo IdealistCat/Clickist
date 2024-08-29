@@ -36,6 +36,7 @@ function clickFunction() {
     GAMEPLAY_MONEY += GAMEPLAY_MONEY_ADDITION;
     
     changeTexts();
+    save();
 }
 function changeTexts() {
     moneyText.innerHTML = `Money: $${Number(GAMEPLAY_MONEY).toString()}`;
@@ -49,7 +50,15 @@ function secondPass() {
     
     changeTexts();
     // clearInterval(INTERVAL);
+    save();
+}
+function save() {
+    localStorage.setItem('money', GAMEPLAY_MONEY);
+}
+function load() {
+    GAMEPLAY_MONEY = localStorage.getItem('money');
 }
 
 clickButton.addEventListener("click", clickFunction);
+load();
 changeTexts();
