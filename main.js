@@ -16,7 +16,7 @@ versionText.innerText = `v${GAME_VERSION}${GAME_STATE_VERSION_STRING}`;
 // values
 let GAMEPLAY_TOTAL_CLICKS = 0;
 let GAMEPLAY_MONEY = 0;
-let GAMEPLAY_MONEY_AUTOMATIC = 10;
+let GAMEPLAY_MONEY_AUTOMATIC = 1;
 let GAMEPLAY_MONEY_ADDITION = 1;
 
 // timer
@@ -69,7 +69,7 @@ function reset() {
 }
 
 clickButton.addEventListener("click", clickFunction);
-load();
+reset();
 changeTexts();
 
 document.addEventListener("keydown", (event) => {
